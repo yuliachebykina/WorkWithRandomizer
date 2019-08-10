@@ -10,6 +10,7 @@ public class TransformService {
 
     public static String getNumbersList(List<Numbers> newnumbers) {
         String numbersList = "";
+
         for (Numbers numbers: newnumbers) {
             numbersList += numbers.toString();
         }
@@ -22,9 +23,9 @@ public class TransformService {
 
         // Думаю система тут ругается потому что перевести нужно Long и string в integer.
 
-        Long newtimeMilliseconds = Randomizer.getRandomInteger(1, 100);
-        Integer newSessionID = Randomizer.getRandomInteger(1, 100);
-        String newclientIP = Randomizer.getRandomInteger(1, 100);
+        Long newtimeMilliseconds = Randomizer.getRandomInteger(1, 11);
+        Integer newSessionID = Randomizer.getRandomInteger(1, 8);
+        String newclientIP = Randomizer.getRandomInteger(1.1.1.1, 123.123.123.123);
 
         return new Numbers(numbers.getTimeMilliseconds() + numbers.getSessionID() + numbers.getClientIP()+ newtimeMilliseconds+ newSessionID + newclientIP;
     }
